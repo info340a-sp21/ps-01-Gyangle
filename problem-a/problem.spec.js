@@ -37,7 +37,7 @@ describe('Source code is valid', () => {
     }
 
     await expect(htmlPath).toHaveNoHtmlLintErrorsAsync(lintOpts);
-  })  
+  })
 
   test('CSS validates without errors', async () => {
     await expect('problem-a/css/*.css').toHaveNoCssLintErrorsAsync();
@@ -54,7 +54,7 @@ describe('Has required HTML', () => {
   test('Specifies charset', () => {
     expect($('head > meta[charset]').length).toBe(1); //has 1 tag
   })
-  
+
   test('Includes page title', () => {
     let title = $('head > title');
     expect(title.length).toEqual(1); //has 1 tag
